@@ -10,29 +10,39 @@
 </head>
 <body>
 
-<label for="fname">put your name:</label>
-<input type="text" id="fname" name="fname">
 
-    <h2 id="demo"> hellow world </h2>
-<p id="display"> </p>
+    <!-- <h2 id="demo"> hellow world </h2> -->
+    <input id= "input" type="text" value = "hellow world">
+    <button id ="submit-btn">submit</button>
+    <p id="display"> </p>
 
 </body>
 
 <script> 
-
-let myElement = document.getElementById('demo')
-let myst0 = myElement.textContent
-let myst1 = myst0.toUpperCase()
-let myst2=  myst1.toLowerCase().replace("o", "y").toUpperCase()
-let myst3 = myst2.split("").reverse().join("")
-// let displayElement = document.getElementById('display')
-
-document.getElementById('display').innerHTML = ` -- ${myst1} -- ${myst2} --${myst3}`
-
-console.log(`${myst0}\n${myst1}\n${myst2}\n${myst3}`) 
-</script>
-
-
+document.getElementById('submit-btn').addEventListener('click', function() {
+    let myElement = document.querySelector('input').value; 
+    let myst0 = myElement;
+    let myst1 = myst0.toUpperCase();
+    let myst2 = myst1.toLowerCase().replace("o", "y").toUpperCase();
+    let myst3 = myst2.split("").reverse().join("");
     
+    document.getElementById('display').innerHTML = ` -- ${myst1} -- ${myst2} --${myst3}`;
+    
+    console.log(`${myst0}\n${myst1}\n${myst2}\n${myst3}`); 
+});
+
+
+// let myElement = document.getElementById('demo')
+// let myst0 = myElement.textContent
+// let myst1 = myst0.toUpperCase()
+// let myst2=  myst1.toLowerCase().replace("o", "y").toUpperCase()
+// let myst3 = myst2.split("").reverse().join("")
+// // let displayElement = document.getElementById('display')
+
+// document.getElementById('display').innerHTML = ` -- ${myst1} -- ${myst2} --${myst3}`
+
+// console.log(`${myst0}\n${myst1}\n${myst2}\n${myst3}`) 
+// </script>
+
 
 </html>
