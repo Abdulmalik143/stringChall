@@ -26,7 +26,7 @@
 
         </div>
 
-        <div >
+        <div style="" >
             <p id="result1"> </p>
             <p id="result2"> </p>
 
@@ -45,7 +45,7 @@
         
         let bmi = W1user/(H1user*H1user)
 
-        document.getElementById("result1").innerHTML = bmi
+        document.getElementById("result1").innerHTML = bmi.toFixed(2)
 
         if (bmi < 18){
             document.getElementById("result2").innerHTML = "تعاني من النحافة"
@@ -53,11 +53,11 @@
             document.getElementById("result2").innerHTML = "وزنك طبيعي"
         }else if (bmi < 30) {
             document.getElementById("result2").innerHTML = "وزنك زائد"
-        } else if (bmi < 35) {
+        }else if (bmi < 35) {
             document.getElementById("result2").innerHTML = "سمنة درجة اولى"
         }else if (bmi < 40) {
             document.getElementById("result2").innerHTML = "سمنة درجة ثانية"
-        }else if (bmi > 40) {
+        }else  {
             document.getElementById("result2").innerHTML = "سمنة خطيرة"
         }
        
