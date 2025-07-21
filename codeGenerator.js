@@ -37,8 +37,11 @@ function getRandomCodes(num=4) {
             codes.push(getRandomCode())
         }
     }
+
     return codes
+
 }
+
 
 
 function printresult() {
@@ -48,14 +51,13 @@ function printresult() {
     
 }
 
-let NumberOfCode = document.getElementById("inputNum")
-
-
-
-document.getElementById("inputNum")
-document.getElementById("PrintCode").addEventListener("click", function() {
-    document.getElementById("result1").innerHTML =  "aaaa"
-})
+let NumOfCodeInput = document.getElementById("NumOfCodeText")
+    
+document.getElementById("resultButton").addEventListener("click", function () {
+let value = parseInt(NumOfCodeInput.value)
+    // console.log(getRandomCodes(value))
+    document.getElementById("result").innerHTML = getRandomCodes(value).join("<br>") // الحل هو دمج <br> مع النتيجة لطباعة سطر جديد 
+})  
 
 
 
