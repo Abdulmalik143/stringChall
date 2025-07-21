@@ -41,8 +41,21 @@ function getRandomCodes(num=4) {
 }
 
 
+function printresult() {
 
-randCodes = getRandomCodes(10)
-console.log(randCodes)
+    randCodes = getRandomCodes(10)
+    print (getRandomCodes(10))
+    
+}
+
+let NumberOfCode = document.getElementById("inputNum")
+
+
+
+document.getElementById("inputNum")
+document.getElementById("PrintCode").addEventListener("click", function() {
+    document.getElementById("result1").innerHTML =  "aaaa"
+})
+
 
 
